@@ -1,0 +1,38 @@
+# Python specific ignores
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python/
+env/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# IDE specific ignores (VS Code)
+.vscode/
+
+# Operating System specific ignores
+.DS_Store
+Thumbs.db
+
+# Project specific temporary/generated files
+my_first_upload.txt       # Created during boto3 upload test
+downloaded_from_s3.txt    # Created during boto3 download test
+credentials.csv           # AWS credentials file
+*.json_key                # GCP Service Account key files
+
+# Big Data temporary/output files
+spark-warehouse/
+derby.log
+metastore_db/
+*.csv.gz.tmp
+*.parquet.tmp
+output/                   # Common directory for temporary output
+data/temp/                # Another common temp data directory
+
+# Machine Learning specific ignores
+*.pkl                     # Python pickle files
+*.joblib                  # Joblib files
+*.h5                      # Keras/TensorFlow model files
+models/                   # Directory to store trained models

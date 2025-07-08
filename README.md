@@ -15,3 +15,10 @@ Build a data pipeline and analytics platform for processing and analyzing simula
 - Used us-east-2 for storage.
 - Block all public access to maintain security.
 - Enabled versioning on raw data bucket to grasp understanding.
+#### 1.2.1 Python Interaction (boto3)
+- boto3 is the AWS SDK
+- `list_s3_buckets()` names all buckets under provided credentials.
+- `upload_file_to_s3(local_file_path, bucket_name, s3_key)` uploads a local file into provided s3 bucket.
+- `download_file_from_s3(bucket_name, s3_key, local_file_path)` downloads a file from a provided s3 bucket to a local path.
+- To run `s3_utils.py`, call directly via `python src/s3_utils.py`.
+- Both `my_first_upload.txt` and `downloaded_from_s3.txt` are test files that won't be committed.
