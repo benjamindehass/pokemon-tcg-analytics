@@ -22,3 +22,9 @@ Build a data pipeline and analytics platform for processing and analyzing simula
 - `download_file_from_s3(bucket_name, s3_key, local_file_path)` downloads a file from a provided s3 bucket to a local path.
 - To run `s3_utils.py`, call directly via `python src/s3_utils.py`.
 - Both `my_first_upload.txt` and `downloaded_from_s3.txt` are test files that won't be committed.
+## 2. Data Warehousing (Google BigQuery)
+### 2.1 BigQuery Fundamentals & GCP Project Setup
+- Established a new GCP Project `pokemon-data-project-bdehass`.
+- Understood that BigQuery is a serverless, columnar, highly scalable cloud data warehouse.
+- Learned the columnar data storage benefits BigQuery by allowing access to a subset of columns as necessary.
+- Designed a rough sketch for BigQuery schema to account for expected values attached to incoming data.
