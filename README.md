@@ -28,3 +28,7 @@ Build a data pipeline and analytics platform for processing and analyzing simula
 - Understood that BigQuery is a serverless, columnar, highly scalable cloud data warehouse.
 - Learned the columnar data storage benefits BigQuery by allowing access to a subset of columns as necessary.
 - Designed a rough sketch for BigQuery schema to account for expected values attached to incoming data.
+### 2.2 Schema Design
+- Gained understanding on what star/snowflake schema are and theirs benefits.
+- Determined Star Schema a better fit for this project due to its faster queries and simple structure for easier joins.
+- Designed a high-level Star Schema ![Pokémon TCG Data Warehouse Star Schema](docs/brainstorm_star_schema.png) with a central fact table `fact_market_events` surrounded by four dim tables `dim_card`, `dim_seller`, `dim_platform`, and `dim_time`.
