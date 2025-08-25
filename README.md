@@ -32,3 +32,5 @@ Build a data pipeline and analytics platform for processing and analyzing simula
 - Gained understanding on what star/snowflake schema are and theirs benefits.
 - Determined Star Schema a better fit for this project due to its faster queries and simple structure for easier joins.
 - Designed a high-level Star Schema ![Pokémon TCG Data Warehouse Star Schema](docs/brainstorm_star_schema.png) with a central fact table `fact_market_events` surrounded by four dim tables `dim_card`, `dim_seller`, `dim_platform`, and `dim_time`.
+### 2.3 BigQuery DDL and Optimization
+- The `fact_market_events` table is partitioned by the `event_timestamp` column and clustered by `card_id` and `platform_id`. This strategy significantly improves query performance and reduces costs by limiting the amount of data scanned.
