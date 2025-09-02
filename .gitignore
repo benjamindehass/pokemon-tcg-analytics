@@ -21,6 +21,7 @@ my_first_upload.txt       # Created during boto3 upload test
 downloaded_from_s3.txt    # Created during boto3 download test
 credentials.csv           # AWS credentials file
 *.json_key                # GCP Service Account key files
+dummy_data.jsonl
 
 # Big Data temporary/output files
 spark-warehouse/

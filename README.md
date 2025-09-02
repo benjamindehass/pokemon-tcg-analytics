@@ -36,3 +36,7 @@ Build a data pipeline and analytics platform for processing and analyzing simula
 - The `fact_market_events` table is partitioned by the `event_timestamp` column and clustered by `card_id` and `platform_id`. This strategy significantly improves query performance and reduces costs by limiting the amount of data scanned.
 ### 2.4 Table Creation
 - Tables were created in BigQuery using DDL. Used BigQuery explorer to reach tables in order to verify schema, partitioning, and clustering aer as desired.
+### 2.5 Initial Data Loading (S3 -> BigQuery)
+- Pulled dummy data file from S3 bucket to be placed into a temporary GCS bucket. 
+- In BigQuery, under correct dataset, must create table and ensure data being loaded has the same schema as the table it is being loaded in to.
+- Initial challenges include data `event_id` being loaded as nullable, where it should be required in the schema; solution chosen was to manually attach the schema for the incoming data rather than allow BigQuery to auto schema, which solved the problem.
